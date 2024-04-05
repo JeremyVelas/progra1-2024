@@ -1,0 +1,112 @@
+#include <iostream>
+using namespace std; 
+int main (){
+	double tiempo, velocidad, distancia, opcion, operacion,elija,op;
+	opcion=1;
+	while(opcion==1)
+	{
+	cout<<"MRU" <<endl; 
+	cout<<"Que desea calcular" <<endl;
+	cout<<"1. Calcular tiempo" <<endl;
+	cout<<"2. Calcular velocidad" <<endl;
+	cout<<"3. Calcular distancia" <<endl; 
+	cin>> opcion; 
+ 
+ //tiempo
+    if(opcion==1)
+	{
+		cout<<"Ha escogido tiempo, en que unidad desea encontrar el tiempo"<<endl;
+		cout<<"1. segundos"<<endl;
+		cout<<"2. horas"<<endl;
+		cin>>elija;
+		if(elija==1)
+		{
+		cout<<"Ingrese distancia" <<endl;
+		cin>> distancia;
+		cout<<"Ingrese velocidad" <<endl;
+		cin>> velocidad;
+		
+		operacion= distancia/velocidad;
+		cout<<"El tiempo es de " <<operacion<<" segundos"<<endl; 
+	    }
+	else if(elija==2)
+	    {
+		cout<<"Ingrese distancia" <<endl;
+		cin>> distancia;
+		cout<<"Ingrese velocidad" <<endl;
+		cin>> velocidad;
+		
+		operacion= distancia/velocidad;
+		cout<<"El tiempo es de " <<operacion<<" horas"<<endl; 
+	    }
+	}
+
+//velocidad
+	else if(opcion==2)
+	{
+		cout<<"Ha escogido velocidad, en que unidad desea encontrar la velocidad"<<endl;
+		cout<<"1. m/s"<<endl;
+		cout<<"2. k/h"<<endl;
+		cin>>elija;
+		if(elija==1)
+		{
+		cout<<"Ingrese distancia" <<endl;
+		cin>> distancia;
+		cout<<"Ingrese tiempo" <<endl;
+		cin>> tiempo;
+		
+		operacion= distancia/tiempo;
+		cout<<"La velocidad es de " <<operacion<<" m/s"<<endl; 
+	    }
+	    else if(elija==2)
+	    {
+	   	cout<<"Ingrese distancia" <<endl;
+		cin>> distancia;
+		cout<<"Ingrese tiempo" <<endl;
+		cin>> tiempo;
+		
+		operacion= distancia/tiempo;
+		cout<<"La velocidad es de " <<operacion<<" k/h"<<endl; 
+		}
+    }
+    
+    //distancia
+	else if(opcion==3)
+	{
+		cout<<"Ha escogido distancia, en que unidad desea encontrar la distancia"<<endl;
+		cout<<"1. metros"<<endl;
+		cout<<"2. kilometros"<<endl;
+		cin>>elija;
+		if(elija==1)
+		{
+		cout<<"ingrese velocidad" <<endl;
+		cin>> velocidad;
+		cout<<"Ingrese tiempo" <<endl;
+		cin>> tiempo;
+		
+		operacion= velocidad * tiempo;
+		cout<<"La distancia es de " <<operacion<<" metros"<<endl; 
+	    }
+	    else if(elija==2)
+	    {
+		cout<<"ingrese velocidad" <<endl;
+		cin>> velocidad;
+		cout<<"Ingrese tiempo" <<endl;
+		cin>> tiempo;
+		
+		operacion= velocidad * tiempo;
+		cout<<"La distancia es de " <<operacion<<" kilometros"<<endl;
+		}
+    }
+	else 
+	{
+		cout<<"esa opcion no esta disponible" <<endl; 
+	}
+	cout<<"necesita realizar otro calculo?"<<endl;
+	cout<<"1. Si"<<endl;
+	cout<<"2. No"<<endl;
+	cin>>opcion;
+    }
+    cout<<"ok, tenga buen dia"<<endl;
+	return 0;
+}
